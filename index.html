@@ -23,10 +23,67 @@
 
 <body>
 
+<div class="stage-shelf hidden" id="sidebar">
+  <ul class="nav nav-bordered nav-stacked flex-column">
+    <li class="nav-header"><small>Examples</small></li>
+    <li class="nav-item">
+      <a class="nav-link active" href="../bold/index.html">Bold</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../index.html">Startup</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../minimal/index.html">Minimal</a>
+    </li>
+
+    <li class="nav-divider"></li>
+
+    <li class="nav-header"><small>Sections</small></li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="#grid" data-target="#stage" data-toggle="stage">Grid</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#chainz" data-target="#stage" data-toggle="stage">2 Chainz</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#pricing" data-target="#stage" data-toggle="stage">Pricing</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#footer" data-target="#stage" data-toggle="stage">About</a>
+    </li>
+
+    <li class="nav-divider"></li>
+
+    <li class="nav-header"><small>Docs</small></li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="../docs/index.html">Theme</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="http://getbootstrap.com">Bootstrap</a>
+    </li>
+
+  </ul>
+</div>
+
 <div class="stage" id="stage">
 
   <div class="block block-fill-height app-block-wayne"
        style="background-image: url(../assets/img/lilclark.jpg)">
+
+    <div class="container py-4 fixed-top app-navbar">
+      <nav class="navbar navbar-transparent navbar-padded navbar-expand-md float-right">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-target="#stage"
+          data-toggle="stage"
+          data-distance="-250">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    </div>
 
     <div class="block-sm-middle block-xs-bottom">
       <div class="container">

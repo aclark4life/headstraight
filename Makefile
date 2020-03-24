@@ -330,3 +330,6 @@ vm: vagrant-init  # Alias
 #APP = app
 .DEFAULT_GOAL=commit-push
 #install: pip-install
+
+deploy:
+	aws --profile default s3 sync --exclude ".git/*" --exclude ".gitignore" --exclude "Makefile" --exclude "README.rst" . s3://headstraightband.com --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers

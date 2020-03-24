@@ -333,3 +333,5 @@ vm: vagrant-init  # Alias
 
 deploy:
 	aws --profile default s3 sync --exclude ".git/*" --exclude ".gitignore" --exclude "Makefile" --exclude "README.rst" . s3://headstraightband.com --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
+	aws cloudfront create-invalidation --distribution-id E1OIVKRQH3OZTA --paths "/*"
+

@@ -10,7 +10,7 @@
 
     <title>
       
-      Headstraight
+        Headstraight
       
     </title>
 
@@ -18,114 +18,105 @@
       <link href="https://fonts.googleapis.com/css?family=Lora:400,400italic|Roboto:100,300,400,700" rel="stylesheet">
       <link href="toolkit-bold.css" rel="stylesheet">
       <link href="application-bold.css" rel="stylesheet">
-    
-      <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
-      <style type="text/css">
-          #mc_embed_signup{background:#EEE04A; clear:left; font:14px Helvetica,Arial,sans-serif; }
-          /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-             We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-      </style>
 
+
+    <style>
+      /* note: this is a hack for ios iframe for bootstrap themes shopify page */
+      /* this chunk of css is not part of the toolkit :) */
+      /* …curses ios, etc… */
+      @media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+        body {
+          width: 1px;
+          min-width: 100%;
+          *width: 100%;
+        }
+        #stage {
+          height: 1px;
+          overflow: auto;
+          min-height: 100vh;
+          -webkit-overflow-scrolling: touch;
+        }
+      }
+    </style>
   </head>
 
 
 <body>
   
+
+
+
 <div class="stage-shelf hidden" id="sidebar">
-  <ul class="nav nav-bordered nav-stacked flex-column fixed-top mt-5">
-    <li class="nav-header"><a style="text-decoration: none" href="#"><h4>Headstraight</h4></a></li>
-    <li class="nav-header"><h4>Buy/Stream</h4></li>
+  <ul class="nav nav-bordered nav-stacked flex-column">
+    <li class="nav-header"><small>Examples</small></li>
     <li class="nav-item">
-      <a class="nav-link" target="_blank" href="https://headstraight.bandcamp.com">Bandcamp</a>
+      <a class="nav-link active" href="../bold/index.html">Bold</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" target="_blank" href="https://soundcloud.com/headstraightband">Soundcloud</a>
+      <a class="nav-link" href="../index.html">Startup</a>
     </li>
-
-    <li class="nav-divider"></li>
-
     <li class="nav-item">
-      <a class="nav-link" href="#sign-up">Sign up</a>
+      <a class="nav-link" href="../minimal/index.html">Minimal</a>
     </li>
 
     <li class="nav-divider"></li>
 
+    <li class="nav-header"><small>Sections</small></li>
+
     <li class="nav-item">
-      <a class="nav-link" target="_blank" href="https://www.facebook.com/headstraightband"><i class="fab fa-facebook fa-2x text-info"></i></a>
+      <a class="nav-link" href="#grid" data-target="#stage" data-toggle="stage">Grid</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" target="_blank" href="https://www.instagram.com/aclark4life/"><i class="fab fa-instagram fa-2x text-info"></i></a>
+      <a class="nav-link" href="#chainz" data-target="#stage" data-toggle="stage">2 Chainz</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" target="_blank" href="https://patreon.com/aclark4life"><i class="fab fa-patreon fa-2x text-info"></i></a>
+      <a class="nav-link" href="#pricing" data-target="#stage" data-toggle="stage">Pricing</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" target="_blank" href="https://twitter.com/headstraightdc"><i class="fab fa-twitter fa-2x text-info"></i></a>
+      <a class="nav-link" href="#footer" data-target="#stage" data-toggle="stage">About</a>
+    </li>
+
+    <li class="nav-divider"></li>
+
+    <li class="nav-header"><small>Docs</small></li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="../docs/index.html">Theme</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" target="_blank" href="https://youtube.com/aclark4life"><i class="fab fa-youtube fa-2x text-info"></i></a>
+      <a class="nav-link" href="http://getbootstrap.com">Bootstrap</a>
     </li>
 
   </ul>
 </div>
 
 
-<nav class="navbar navbar-expand-md fixed-top">
-  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-    <ul class="navbar-nav mr-auto bg-dark">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Headstraight</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Buy/Stream</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" target="_blank" href="https://headstraight.bandcamp.com">Bandcamp</a>
-          <a class="dropdown-item" target="_blank" href="https://soundcloud.com/headstraightband">Soundcloud</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#sign-up">Sign up</a>
-      </li>
-    </ul>
-    <a target="_blank" href="https://www.facebook.com/headstraightband"><i class="fab fa-facebook fa-2x text-info mx-2"></i></a>
-    <a target="_blank" href="https://www.instagram.com/aclark4life/"><i class="fab fa-instagram fa-2x text-info mx-2"></i></a>
-    <a target="_blank" href="https://patreon.com/aclark4life"><i class="fab fa-patreon fa-2x text-info mx-2"></i></a>
-    <a target="_blank" href="https://twitter.com/headstraightdc"><i class="fab fa-twitter fa-2x text-info mx-2"></i></a>
-    <a target="_blank" href="https://youtube.com/aclark4life"><i class="fab fa-youtube fa-2x text-info mx-2"></i></a>
-  </div>
-</nav>
-
-
-
 <div class="stage" id="stage">
 
-  <div class="block block-fill-height app-block-wayne navbar navbar-expand-md"
+  <div class="block block-fill-height app-block-wayne"
        style="background-image: url(../assets/img/lilwayne.jpg)">
 
-    <nav class="navbar fixed-top">
-      <button class="btn btn-link stage-toggle navbar-toggler" data-target="#stage" data-toggle="stage">
-        <span class="icon icon-menu stage-toggle-icon"></span>
-        Menu
-      </button>
-    </nav>
+    <button class="btn btn-link stage-toggle" data-target="#stage" data-toggle="stage">
+      <span class="icon icon-menu stage-toggle-icon"></span>
+      Menu
+    </button>
 
     <div class="block-sm-middle block-xs-bottom">
       <div class="container">
         <div class="row">
           <div class="col-lg-5">
             <h1 class="block-title mb-4">
-              <span class="text-white">Alex Clark</span>
+              <span class="text-ribbon text-ribbon-primary">
+                <span>Alex Clark</span>
+              </span>
             </h1>
             <p class="lead mt-1">
-              <span class="text-white">
+              <span class="text-ribbon text-ribbon-primary">
+                <span>
                   Alex Clark, performing as "Headstraight", brings you his angst-themed alternative rock music.
+                </span>
               </span>
             </p>
-            <p>
-              <img class="bg-dark p-1 rounded" src="../assets/img/headstraight.jpg">
-              <img class="bg-dark p-1 rounded" src="../assets/img/headstraight2.jpg">
-            </p>
-            <a class="btn btn-lg btn-warning text-uppercase" href="#buy-stream">Buy/Stream</a>
           </div>
         </div>
       </div>
@@ -148,14 +139,12 @@
             <div class="col-lg-12">
               <div class="card card-bold card-danger mb-0 app-box-shadow">
                 <img src="../assets/img/azalea.jpg">
-<!--
                 <div class="card-body pb-5">
                   <h4 class="mb-0">Iggy Azalea</h4>
                   <p class="text-serif"><em>Released on Dropp 6 weeks early</em></p>
                   <hr>
                   <p class="text-serif"><em>Ms. Azalea was the first artist to reach out to Dropp to coordinate her leak. We knew it was going to be the largest unofficial album drop in history. We doubled server capacity and made a lot ton of coffee.</em></p>
                 </div>
--->
               </div>
             </div>
           </div>
@@ -198,23 +187,22 @@
       </div>
     </div>
 
-    <div class="block-sm-middle block-xs-top" id="buy-stream">
+    <div class="block-sm-middle block-xs-top">
       <div class="container">
         <div class="row justify-content-end">
           <div class="col-md-7 col-lg-5">
             <h1 class="block-title mb-4">
               <span class="text-ribbon text-ribbon-primary">
-                <span>Buried EP.</span>
+                <span>Hand Picked.</span>
               </span>
             </h1>
             <p class="lead">
               <span class="text-ribbon text-ribbon-primary">
                 <span>
-                  Buy Digital Album on Bandcamp
+                  Every album, song, and video we leak is the very best in class.
                 </span>
               </span>
             </p>
-            <iframe style="border: 0; width: 350px; height: 555px;" src="https://bandcamp.com/EmbeddedPlayer/album=4115076605/size=large/bgcol=333333/linkcol=e99708/transparent=true/" seamless><a href="http://headstraight.bandcamp.com/album/buried-ep">Buried EP by Headstraight</a></iframe>
           </div>
         </div>
       </div>
@@ -236,13 +224,13 @@
           <div class="col-md-7 col-lg-5">
             <h1 class="block-title mb-4">
               <span class="text-ribbon">
-                <span>Good Nature.</span>
+                <span>Music Videos.</span>
               </span>
             </h1>
             <p class="lead">
               <span class="text-ribbon">
                 <span>
-                  Buy Digital Album on Bandcamp
+                  We stream all leaks alongside music videos cause we don't play games.
                 </span>
               </span>
             </p>
@@ -250,7 +238,9 @@
         </div>
         <div class="row mb-3">
           <div class="col-md-8">
-            <iframe style="border: 0; width: 350px; height: 786px;" src="https://bandcamp.com/EmbeddedPlayer/album=3090539290/size=large/bgcol=333333/linkcol=e99708/transparent=true/" seamless><a href="http://headstraight.bandcamp.com/album/good-nature">Good Nature by Headstraight</a></iframe>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="682" height="384" src="https://www.youtube.com/embed/Bm5iA4Zupek?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
           </div>
         </div>
       </div>
@@ -266,7 +256,7 @@
       </div>
     </div>
 
-    <div class="block-xs-middle" id="sign-up">
+    <div class="block-xs-middle">
       <div class="container">
         <div class="row justify-content-end">
           <div class="col-md-7 col-lg-6">
@@ -275,19 +265,15 @@
                 <span>Sign up now.</span>
               </span>
             </h1>
-            <!-- Begin Mailchimp Signup Form -->
-            <div id="mc_embed_signup">
-            <form action="https://aclark.us1.list-manage.com/subscribe/post?u=33f65e6680b2e1cfa1740b621&amp;id=e614629085" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                <div id="mc_embed_signup_scroll">
-                
-                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_33f65e6680b2e1cfa1740b621_e614629085" tabindex="-1" value=""></div>
-                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                </div>
-            </form>
+
+            <div class="text-ribbon-inputs-split">
+              <input type="text" class="h4 text-ribbon-input text-ribbon-primary" placeholder="Name">
+              <input type="text" class="h4 text-ribbon-input text-ribbon-primary" placeholder="Email">
             </div>
-            <!--End mc_embed_signup-->
+            <input type="text" class="h4 text-ribbon-input text-ribbon-input-half text-ribbon-primary" placeholder="Promo code">
+            <button type="button" class="btn btn-square btn-primary btn-lg btn-block">
+              Get the beta early
+            </button>
           </div>
         </div>
       </div>
@@ -303,12 +289,12 @@
           <div class="col-lg-5">
             <h1 class="block-title mb-4">
               <span class="text-ribbon">
-                <span>Patreon.</span>
+                <span>Easy Pricing.</span>
               </span></h1>
             <p class="lead">
               <span class="text-ribbon text-muted">
                 <span>
-                  Headstraight is creating Music
+                  One yearly payment of $99 and get unlimited leaked tracks.
                 </span>
               </span>
             </p>
@@ -318,18 +304,92 @@
           <div class="col-lg-4">
             <div class="card mb-3 mb-lg-0">
               <div class="card-body">
-                <h3 class="card-title">Select a membership</h3>
+                <h3 class="card-title">Basic Trial</h3>
                 <h4 class="text-muted text-serif mt-0 mb-3">
-                  <em>$5/mo</em>
+                  <em>$0/yr</em>
                 </h4>
+                <p class="text-serif mb-1">
+                  <em>
+                    Endless stations based on artists, genres, and moods, including You FM, your own personalized station.
+                  </em>
+                </p>
                 <hr>
                 <ul class="iconlist text-serif mb-4">
                   <li class="active">
                     <span class="icon icon-check"></span>
-                    <em>Digital downloads</em>
+                    <em>Unlimited streaming</em>
+                  </li>
+                  <li>
+                    <span class="icon icon-cross"></span>
+                    <em>Day of leak access</em>
+                  </li>
+                  <li>
+                    <span class="icon icon-cross"></span>
+                    <em>Offline sync</em>
                   </li>
                 </ul>
-                <a target="_blank" class="btn btn-light btn-lg" href="https://www.patreon.com/join/aclark4life/checkout?rid=4802806">Join</a>
+                <button class="btn btn-secondary btn-square btn-block btn-lg">Start a basic trial</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card accent-primary mb-3 mb-lg-0">
+              <div class="card-body">
+                <h3 class="card-title">Anual Access</h3>
+                <h4 class="text-primary text-serif mt-0 mb-3">
+                  <em>$99/yr</em>
+                </h4>
+                <p class="text-serif mb-1">
+                  <em>
+                    Endless stations based on artists, genres, and moods, including You FM, your own personalized station.
+                  </em>
+                </p>
+                <hr>
+                <ul class="iconlist text-serif mb-4">
+                  <li class="active">
+                    <span class="icon icon-check"></span>
+                    <em>Unlimited streaming</em>
+                  </li>
+                  <li class="active">
+                    <span class="icon icon-check"></span>
+                    <em>Day of leak access</em>
+                  </li>
+                  <li>
+                    <span class="icon icon-cross"></span>
+                    <em>Offline sync</em>
+                  </li>
+                </ul>
+                <button class="btn btn-primary btn-square btn-block btn-lg">Start a basic trial</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card mb-3 mb-lg-0">
+              <div class="card-body">
+                <h3 class="card-title">Celebrity Look</h3>
+                <h4 class="text-muted text-serif mt-0 mb-2">
+                  <em>$299/yr</em>
+                </h4>
+                <p class="text-serif mb-1">
+                  <em>
+                    Endless stations based on artists, genres, and moods, including You FM, your own personalized station.
+                  </em>
+                <hr>
+                <ul class="iconlist text-serif mb-4">
+                  <li class="active">
+                    <span class="icon icon-check"></span>
+                    <em>Unlimited streaming</em>
+                  </li>
+                  <li class="active">
+                    <span class="icon icon-check"></span>
+                    <em>Day of leak access</em>
+                  </li>
+                  <li class="active">
+                    <span class="icon icon-check"></span>
+                    <em>Offline sync</em>
+                  </li>
+                </ul>
+                <button class="btn btn-secondary btn-square btn-block btn-lg">Start a basic trial</button>
               </div>
             </div>
           </div>
@@ -344,31 +404,42 @@
       <div class="row text-serif">
         <div class="col-md-2 mb-4">
           <ul class="list-unstyled list-spaced">
+            <li><h4>Tech</h4></li>
+            <li class="text-muted"><em>Overview</em></li>
+            <li class="text-muted"><em>Design</em></li>
+            <li class="text-muted"><em>Display</em></li>
+            <li class="text-muted"><em>Technology</em></li>
+          </ul>
+        </div>
+        <div class="col-md-2 mb-4">
+          <ul class="list-unstyled list-spaced">
             <li><h4>Press</h4></li>
-            <li class="text-muted"><em><a target="_blank" href="Beth_Vol1_Iss3.pdf">Next Door News &middot; Volume 1 Issue 3 &middot; July 2006</a></em></li>
+            <li class="text-muted"><em>Overview</em></li>
+            <li class="text-muted"><em>Design</em></li>
+            <li class="text-muted"><em>Display</em></li>
+            <li class="text-muted"><em>Technology</em></li>
+          </ul>
+        </div>
+        <div class="col-md-2 mb-4">
+          <ul class="list-unstyled list-spaced">
+            <li><h4>Other</h4></li>
+            <li class="text-muted"><em>Overview</em></li>
+            <li class="text-muted"><em>Design</em></li>
+            <li class="text-muted"><em>Display</em></li>
+            <li class="text-muted"><em>Technology</em></li>
           </ul>
         </div>
         <div class="col-md-6 mb-4">
           <ul class="list-unstyled list-spaced">
             <li><h4>Photography</h4></li>
             <li class="text-muted">
-              <em>Background photos: <a target="_blank" href="https://www.facebook.com/Bo-Tree-Photography-106400607410680/">Bo Tree Photography</a></em>
+              <em>Background photos: <a href="https://www.flickr.com/photos/demxx/8702542709/">2 Chainz by demxx</a> and <a href="https://www.flickr.com/photos/carnivalridexx/6048218344/">Nicki Minaj by Jennifer</a> are shared under the <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0 license</a>. <a href="https://www.flickr.com/photos/ddalledo/2204168450/">Kanye West by Daniele Dalledonne</a> is shared under the <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0 license<a>. <a href="https://commons.wikimedia.org/wiki/Category:Lil_Wayne#/media/File:Lil_Wayne.jpg">Lil Wayne by RJ Shaughnessy</a>, and <a href="https://www.flickr.com/photos/didy_b/8150029917">Mos Def by Eddy BERTHIER</a> are public domain works. Concert portraits: <a href="https://www.flickr.com/photos/histrionicss/13951485730">Iggy Azalea by Laura Murray</a>, <a href="https://www.flickr.com/photos/32999928@N05/7213700394/">Childish Gambino by Eli Watson</a>, and <a href="https://www.flickr.com/photos/scissorfighter/5169715083/">Kid Cudi by Dana Beveridge</a> are shared under the <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0 license</a>.<a href="https://www.flickr.com/photos/jasonpersse/5710284405/"> Kanye West by Jason Persse</a> and <a href="https://www.flickr.com/photos/tamtam7683/5990345195">Nicki Minaj by tamtam7683</a> are shared under the <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0 license</a>.</em>
             </li>
           </ul>
         </div>
       </div>
     </div>
   </div>
-
-
-<footer class="text-muted">
-  <div class="container p-3">
-    <p class="float-right">
-      <a href="#">Back to top</a>
-    </p>
-    <p>&copy; 2020 Headstraight</p>
-  </div>
-</footer>
 
 </div>
 
@@ -377,9 +448,7 @@
 <script src="toolkit.js"></script>
 <script src="application.js"></script>
 <script src="https://kit.fontawesome.com/b99cce5dfd.js" crossorigin="anonymous"></script>
-<script>
-  // execute/clear BS loaders for docs
-  $(function(){while(window.BS&&window.BS.loader&&window.BS.loader.length){(window.BS.loader.pop())()}})
-</script>
+
 </body>
 </html>
+

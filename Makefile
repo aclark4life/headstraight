@@ -34,8 +34,8 @@ include base.mk
 #APP = app
 .DEFAULT_GOAL=commit-push
 #install: pip-install
-#serve: django-serve
-#virtualenv: python-virtualenv-3-7
+serve: python-serve
+virtualenv: python-virtualenv-3-7
 
 deploy:
 	aws --profile default s3 sync --exclude ".git/*" --exclude ".gitignore" --exclude "Makefile" --exclude "README.rst" . s3://headstraightband.com --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers

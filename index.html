@@ -65,17 +65,33 @@
   </ul>
 </div>
 
+
+<nav class="navbar navbar-expand-md fixed-top">
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" data-target="#stage" data-toggle="stage">
+        <a class="nav-link btn btn-lg btn-outline-primary" href="#">Listen</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#sign-up">Sign up</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
 <div class="stage" id="stage">
 
   <a name="top"></a>
 
-  <div class="block block-fill-height app-block-wayne"
+  <div class="block block-fill-height app-block-wayne navbar navbar-expand-md"
        style="background-image: url(../assets/img/lilwayne.jpg)">
 
-    <button class="btn btn-link btn-lg stage-toggle" data-target="#stage" data-toggle="stage">
-      <span class="icon icon-menu stage-toggle-icon"></span>
-      Listen
-    </button>
+    <nav class="navbar fixed-top">
+      <button class="navbar-toggler bg-light" type="button" data-toggle="stage" data-target="#stage" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
 
     <div class="block-sm-middle block-xs-bottom">
       <div class="container">
@@ -236,7 +252,7 @@
       </div>
     </div>
 
-    <div class="block-xs-middle">
+    <div class="block-xs-middle" id="sign-up">
       <div class="container">
         <div class="row justify-content-end">
           <div class="col-md-7 col-lg-6">

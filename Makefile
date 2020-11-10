@@ -1,8 +1,13 @@
-# https://github.com/aclark4life/project-makefile
+# Project Makefile
+# ================
 #
-# The MIT License (MIT)
+# - https://github.com/aclark4life/project-makefile
 #
-# Copyright (c) 2016–2020 Alex Clark
+#
+# License
+# ------------------------------------------------------------------------------ 
+#
+# Copyright 2020 Jeffrey Alexander Clark
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -21,24 +26,27 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-
+#
+#
+# Includes
+# ------------------------------------------------------------------------------ 
+#
 include base.mk
-
-#-------------------------------------------------------------------------------
 #
-# Custom Overrides
+# Overrides
+# ------------------------------------------------------------------------------ 
 #
-# https://stackoverflow.com/a/49804748
+# Here you can override variables, targets, etc.
+#
+.DEFAULT_GOAL := commit-push
+#PROJECT := my_project
+#APP := my_app
+#MESSAGE := My update
 
-#PROJECT = project
-#APP = app
-.DEFAULT_GOAL=commit-push
-#install: pip-install
-serve: python-serve
-virtualenv: python-virtualenv-3-7
-
-deploy:
+deploy-prod:
 	aws --profile default s3 sync --exclude ".git/*" --exclude ".gitignore" --exclude "Makefile" --exclude "README.rst" . s3://headstraightband.com --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
 	aws cloudfront create-invalidation --distribution-id E1OIVKRQH3OZTA --paths "/*"
-stage:
+deploy-dev:
 	aws --profile default s3 sync --exclude ".git/*" --exclude ".gitignore" --exclude "Makefile" --exclude "README.rst" . s3://dev.headstraightband.com --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
+
+deploy: deploy-dev

@@ -49,6 +49,7 @@ deploy-prod:
 deploy-dev:
 	aws --profile default s3 sync --exclude ".git/*" --exclude ".gitignore" --exclude "Makefile" --exclude "README.rst" . s3://dev.headstraightband.com --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
 
-deploy: deploy-dev
+deploy:
+	$(MAKE) deploy-dev
 
 serve: python-serve

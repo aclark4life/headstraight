@@ -183,7 +183,7 @@ django-shell:
 django-static:
 	python manage.py collectstatic --noinput
 django-su:
-	python manage.py createsuperuser
+	python manage.py shell -c "from django.contrib.auth.models import User; User.objects.create_superuser('admin', '', 'admin')"
 django-loaddata-default:
 	python manage.py loaddata
 django-yapf:
@@ -269,7 +269,7 @@ list-targets-default:
         '{print "make "$$0}' | less  # http://stackoverflow.com/a/26339924
 help: list-targets  # Alias
 h: list-targets  # Alias
-pdf:
+pdf-default:
 	rst2pdf README.rst > README.pdf
 	git add README.pdf
 	$(MAKE) commit-push
@@ -300,13 +300,14 @@ my-init-default:
 # Pip
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 #
+PIP := pip --use-feature=2020-resolver
 pip-freeze-default:
-	pip freeze | sort > $(TMPDIR)/requirements.txt
+	$(PIP) freeze | sort > $(TMPDIR)/requirements.txt
 	mv -f $(TMPDIR)/requirements.txt .
 pip-install-default:
-	pip install -r requirements.txt
+	$(PIP) install -r requirements.txt
 pip-install-test:
-	pip install -r requirements-test.txt
+	$(PIP) install -r requirements-test.txt
 pip-install-django:
 	@echo "Django\ndj-database-url\npsycopg2-binary\n" > requirements.txt
 	@$(MAKE) pip-install
@@ -317,13 +318,13 @@ pip-install-sphinx:
 	echo "Sphinx\n" > requirements.txt
 	$(MAKE) pip-install
 pip-upgrade-default:
-	cat requirements.txt | awk -F \= '{print $1}' > $(TMPDIR)/requirements.txt
+	cat requirements.txt | awk -F \= '{print $$1}' > $(TMPDIR)/requirements.txt
 	mv -f $(TMPDIR)/requirements.txt .
-	pip install -U -r requirements.txt
+	$(PIP) install -U -r requirements.txt
 	$(MAKE) pip-freeze
 pip-upgrade-pip:
-	pip install -U pip
-pip-init-requirements:
+	$(PIP) install -U pip
+pip-init:
 	touch requirements.txt
 	git add requirements.txt
 	$(MAKE) commit-push
@@ -334,6 +335,7 @@ pip-up: pip-upgrade  # Alias
 pip-up-pip: pip-upgrade-pip  # Alias
 req: pip-init-requirements  # Alias
 up-pip: pip-upgrade-pip  # Alias
+up: pip-upgrade  # Alias
 #
 # PostgreSQL
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
@@ -353,10 +355,10 @@ python-virtualenv-2-6-default:
 python-virtualenv-2-7-default:
 	virtualenv --python=python2.7 .
 python-virtualenv-3-8-default:
-	virtualenv --python=python3.8 .
+	python3.8 -m venv .
 python-virtualenv-3-9-default:
-	virtualenv --python=python3.9 .
-virtualenv: python-virtualenv-3-9
+	python3.9 -m venv .
+virtualenv: python-virtualenv-3-8
 #
 # Sphinx
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
